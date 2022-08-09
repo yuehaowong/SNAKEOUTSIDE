@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+
+<style>
+    /* center the game board to tehd ead centre of the screen */
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content : center;
+    align-items: center;
+    margin: 0;
+    background-color: black; 
+  }
+  
+  #game-board {
+        background-color: #CCC;
+        width: 100vmin; 
+        height: 100vmin;
+        display: grid;
+        /* this our grid system with 21 columns and 21 rows, '1fr' allows same width & height for all of the grids */
+        grid-template-rows: repeat(21, 1fr);
+        grid-template-columns: repeat(21, 1fr);
+    }
+
+    .snake{
+      background-color: hsl(200,100%,50%);
+      /* the border also scales with browser stretching*/
+      border: .25vmin solid black;
+    }
+  
+    .food{
+      background-color: hsl(50,100%,50%);
+      border: .25vmin solid black; 
+    }
+    </style>
+    <!-- our base js will be in game.js -- the below link imports this html file to the game.js file  -->
+    <script src="game.js" defer type="module"></script>
+</head>
+<body>
+    <!-- this is where all of our game pieces will be, line below will be for import/export -->
+    <div id="game-board"></div>
+</body>
+</html>
+
+<!-- //vmin makes the code responsive so that when you drag it goes out 100% -->
+
